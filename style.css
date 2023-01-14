@@ -12,12 +12,19 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(60px, auto) repeat(6, 1fr);
     /* font-size: larger; */
-    
+
 }
 
-#calculator > button {
+#calculator>button {
     cursor: pointer;
+    outline: none;
+    background-color: antiquewhite;
 }
+
+#calculator>button:hover {
+    background-color: gold;
+}
+
 .display {
     grid-column: 1/-1;
     width: 300px;
@@ -25,15 +32,15 @@
 }
 
 #secondary-display {
-    background-color: aqua;
+    background-color: rgb(188, 188, 250);
 }
 
 #main-display {
     text-align: right;
     font-size: larger;
     word-wrap: break-word;
-    background-color: rosybrown;
-
+    word-break: break-all;
+    background-color: rgb(202, 141, 141);
 }
 
 .span-1 {
@@ -51,9 +58,8 @@ html {
     align-items: center;
     justify-content: center;
     background-color: lavender;
-  
 }
 
 body {
-    border: 1cm solid gold;
+    border: 10px solid gold;
 }

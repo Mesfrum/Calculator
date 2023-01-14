@@ -12,27 +12,27 @@
 
 <body>
     <div id="calculator">
-        <div class="display" id="secondary-display"></div>
-        <div class="display" id="main-display"></div>
-        <button onclick="showInDisplay('')" class="span-1">AC</button>
-        <button onclick="showInDisplay()" id="clear" class="span-2">clear</button>
-        <button onclick="showInDisplay('+')" id="add">+</button>
-        <button onclick="showInDisplay('1')">1</button>
-        <button onclick="showInDisplay('2')">2</button>
-        <button onclick="showInDisplay('3')">3</button>
-        <button onclick="showInDisplay('-')" id="subtract">-</button>
-        <button onclick="showInDisplay('4')">4</button>
-        <button onclick="showInDisplay('5')">5</button>
-        <button onclick="showInDisplay('6')">6</button>
-        <button onclick="showInDisplay('*')" id="multiply">*</button>
-        <button onclick="showInDisplay('7')">7</button>
-        <button onclick="showInDisplay('8')">8</button>
-        <button onclick="showInDisplay('9')">9</button>
-        <button onclick="showInDisplay('/')" id="divide">/</button>
-        <button onclick="showInDisplay('.')" id="multiply">.</button>
-        <button onclick="showInDisplay('0')">0</button>
-        <button onclick="showInDisplay('00')">00</button>
-        <button onclick="showInDisplay()" id="equals">=</button>
+        <div data-secondary-display class="display" id="secondary-display"></div>
+        <div data-main-display class="display" id="main-display"></div>
+        <button data-allclear class="span-1">AC</button>
+        <button data-delete id="delete" class="span-2">DEL</button>
+        <button data-operation" id="add">+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation id="subtract">-</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation id="multiply">*</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation id="divide">/</button>
+        <button data-number id="multiply">.</button>
+        <button data-number>0</button>
+        <button data-number>00</button>
+        <button data-equals id="equals">=</button>
 
     </div>
     <script src="script.js"></script>
