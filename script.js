@@ -9,11 +9,9 @@ class Calculator {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = undefined;
-        this.updateDisplay();
     }
     delete() {
-        this.currentOperand = this.currentOperand.substring(0, this.currentOperand.length - 1);
-        this.updateDisplay();
+        this.currentOperand = this.currentOperand.toString().slice(0, -1);
     }
     appendNumber(number) {
         if (number === '.' && this.currentOperand.includes('.')) {
@@ -22,16 +20,51 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
     chooseOperation(operation) {
+        if (this.currentOperand === '') {
+            return;
+        }
+        if (this.previousOperand != '') {
+            this.calculate();
+        }
         this.operation = operation;
         this.previousOperand = this.currentOperand;
         this.currentOperand = '';
-    }   
-    calculate() {
-
     }
+    calculate() {
+        let comuputation;
+        const previous = parseFloat(this.previousOperand);
+        const current = parseFloat(this.currentOperand);
+        if (isNaN(previous) || isNaN(current)) {
+            return;
+        }
+        switch (this.operation) {
+            case '+':
+                comuputation = previous + current;
+                break;
+            case '-':
+                comuputation = previous - current;
+                break;
+            case '*':
+                comuputation = previous * current;
+                break;
+            case '/':
+                comuputation = previous / current;
+                break;
+            default:
+                return;
+        }
+        this.currentOperand = comuputation;
+        this.operation = undefined;
+        this.previousOperand = '';
+    }
+
     updateDisplay() {
         this.mainDisplayText.innerText = this.currentOperand;
-        this.secondaryDisplayText.innerText = this.previousOperand;
+        if (this.operation != null) {
+            this.secondaryDisplayText.innerText = `${this.previousOperand} ${this.operation}`;
+        } else {
+            this.secondaryDisplayText.innerText = '';
+        }
     }
 }
 
@@ -61,4 +94,15 @@ operationButtons.forEach(button => {
 
 allclearButton.addEventListener('click', () => {
     calculator.clear();
+    calculator.updateDisplay();
+})
+
+equalButton.addEventListener('click', () => {
+    calculator.calculate();
+    calculator.updateDisplay();
+})
+
+deleteButton.addEventListener('click', () => {
+    calculator.delete();
+    calculator.updateDisplay();
 })
