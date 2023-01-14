@@ -33,11 +33,15 @@
 
 #secondary-display {
     background-color: rgb(188, 188, 250);
+    text-align: right;
+    font-size: larger;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 #main-display {
     text-align: right;
-    font-size: larger;
+    font-size: xx-large;
     word-wrap: break-word;
     word-break: break-all;
     background-color: rgb(202, 141, 141);

@@ -1,5 +1,5 @@
 class Calculator {
-    constructor(secondaryDisplayText, mainDisplayText) {
+    constructor (secondaryDisplayText, mainDisplayText) {
         this.secondaryDisplayText = secondaryDisplayText;
         this.mainDisplayText = mainDisplayText;
         this.clear();
@@ -22,13 +22,16 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString() + number.toString();
     }
     chooseOperation(operation) {
-
-    }
+        this.operation = operation;
+        this.previousOperand = this.currentOperand;
+        this.currentOperand = '';
+    }   
     calculate() {
 
     }
     updateDisplay() {
         this.mainDisplayText.innerText = this.currentOperand;
+        this.secondaryDisplayText.innerText = this.previousOperand;
     }
 }
 
@@ -48,6 +51,13 @@ numberButtons.forEach(number => {
         calculator.updateDisplay();
     })
 });
+
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.chooseOperation(button.innerText);
+        calculator.updateDisplay();
+    })
+})
 
 allclearButton.addEventListener('click', () => {
     calculator.clear();
