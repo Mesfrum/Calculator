@@ -18,7 +18,7 @@ A simple calculator, I made as a beginner project for The Odin Project - Fondata
 I will be implementing these improvements gradually. And am welcome to suggestions.
 
 ## Demo 
-![Alt text](media\calc.gif)
+![Dempo gif](https://github.com/Mesfrum/Calculator/blob/main/media/calc.gif)
 
 ## Built With
 
