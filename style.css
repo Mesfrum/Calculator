@@ -17,13 +17,13 @@
 #calculator>button {
     cursor: pointer;
     outline: none;
-    background-color: #000000a2;
+    background-color: #00000087;
     color: white;
     font-size: larger;
 }
 
 #calculator>button:hover {
-    background-color: gold;
+    background-color: rgba(255, 255, 255, 0.263);
 }
 
 .display {
@@ -35,7 +35,7 @@
     font-size: 25px;
     word-wrap: break-word;
     word-break: break-all;
-    background-color: #0000007a;
+    background-color: #00000067;
     color: white;
 }
 
@@ -44,7 +44,7 @@
     font-size: 40px;
     word-wrap: break-word;
     word-break: break-all;
-    background-color: #000000a2;
+    background-color: #00000087;
     color: rgb(255, 255, 255);
 }
 
@@ -62,9 +62,6 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: rgb(74, 107, 253); */
-    background-color: #006FFF;
-
 }
 
 body {
