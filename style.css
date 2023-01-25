@@ -16,7 +16,7 @@
 #calculator>button {
     cursor: pointer;
     outline: none;
-    background-color: #ab609d;
+    background-color: #ff4086;
     color: white;
 }
 
@@ -29,11 +29,11 @@
 }
 
 #secondary-display {
-    background-color: #c25936;
     text-align: right;
     font-size: larger;
     word-wrap: break-word;
     word-break: break-all;
+    background-color: #ff6f00;
     color: white;
 }
 
@@ -42,7 +42,7 @@
     font-size: xx-large;
     word-wrap: break-word;
     word-break: break-all;
-    background-color: rgb(0, 48, 73);
+    background-color: rgb(22, 70, 96);
     color: white;
 }
 
@@ -60,9 +60,11 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(74, 107, 253);
+    /* background-color: rgb(74, 107, 253); */
+    background-color: #006FFF;
+    
 }
 
 body {
-    border: 10px solid gold;
+    border: 10px solid #FAFF00;
 }
