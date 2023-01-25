@@ -11,13 +11,15 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: minmax(70px, auto) repeat(6, 1fr);
+
 }
 
 #calculator>button {
     cursor: pointer;
     outline: none;
-    background-color: #f9327b;
+    background-color: #000000a2;
     color: white;
+    font-size: larger;
 }
 
 #calculator>button:hover {
@@ -30,20 +32,20 @@
 
 #secondary-display {
     text-align: right;
-    font-size: larger;
+    font-size: 25px;
     word-wrap: break-word;
     word-break: break-all;
-    background-color: #ff6f00;
+    background-color: #0000007a;
     color: white;
 }
 
 #main-display {
     text-align: right;
-    font-size: xx-large;
+    font-size: 40px;
     word-wrap: break-word;
     word-break: break-all;
-    background-color: rgb(22, 70, 96);
-    color: white;
+    background-color: #000000a2;
+    color: rgb(255, 255, 255);
 }
 
 .span-1 {
@@ -62,9 +64,9 @@ html {
     justify-content: center;
     /* background-color: rgb(74, 107, 253); */
     background-color: #006FFF;
-    
+
 }
 
 body {
-    border: 10px solid #FAFF00;
+    border: 10px inset #fcff31;
 }

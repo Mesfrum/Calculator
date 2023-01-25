@@ -8,6 +8,7 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="bg_animation.css">
 </head>
 
 <body>
@@ -35,6 +36,16 @@
         <button data-equals id="equals">=</button>
 
     </div>
+    <svg class="background--custom" id="demo" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path fill="#FFFF00" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z"
+            style="animation: path0 5s linear infinite alternate;" />
+        <path fill="#0b7272" fill-opacity="0.7" d="M-100 -100L200 -100L200 50L-100 50Z"
+            style="animation: path1 12.5s linear infinite alternate;" />
+        <path fill="#FF00FF" fill-opacity="0.2" d="M-100 -100L200 -100L200 20L-100 20Z"
+            style="animation: path2 30s linear infinite alternate;" />
+        <path fill="#FF00FF" fill-opacity="0.2" d="M-100 -100L200 -100L200 20L-100 20Z"
+            style="animation: path3 25s linear infinite alternate;" />
+    </svg>
     <script src="script.js"></script>
 </body>
 

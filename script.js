@@ -62,7 +62,7 @@ class Calculator {
         this.previousOperand = '';
     }
 
-    getDisplayNumber(number){
+    getDisplayNumber(number) {
         const stringNum = number.toString();
         const integerNum = parseFloat(stringNum.split('.')[0]);
         const decimalNum = stringNum.split('.')[1];
@@ -71,14 +71,14 @@ class Calculator {
         if (isNaN(integerNum)) {
             integerDisplay = '';
         }
-        else{
-            integerDisplay = integerNum.toLocaleString('en',{maximumFractionDigits: 0});
+        else {
+            integerDisplay = integerNum.toLocaleString('en', { maximumFractionDigits: 0 });
         }
 
         if (decimalNum != null) {
             return `${integerDisplay}.${decimalNum}`;
         }
-        else{
+        else {
             return integerDisplay;
         }
     }
@@ -130,4 +130,53 @@ equalButton.addEventListener('click', () => {
 deleteButton.addEventListener('click', () => {
     calculator.delete();
     calculator.updateDisplay();
+})
+
+document.addEventListener('keydown', (e) => {
+    console.log(e);
+    if (e.ctrlKey && e.key == "Backspace") {
+        calculator.clear();
+        calculator.updateDisplay();
+    }
+    switch (e.key) {
+        // del
+        case "Backspace":
+            calculator.delete();
+            calculator.updateDisplay();
+            break;
+
+        // equals
+        case "=":
+        case "Enter":
+            calculator.calculate();
+            calculator.updateDisplay();
+            break;
+
+        // OPERATIONS 
+        case "+":
+        case "-":
+        case "/":
+        case "*":
+            calculator.chooseOperation(e.key);
+            calculator.updateDisplay();
+            break;
+
+        //NUMBERS
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+        case "0":
+            calculator.appendNumber(e.key);
+            calculator.updateDisplay();
+            break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
 })
