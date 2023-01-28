@@ -1,6 +1,6 @@
 # [Calculator](https://mesfrum.github.io/Calculator)
 
-A simple calculator, I made as a beginner project for The Odin Project - Fondatations. Occasionly I update this repository to include and apply new things I have learnt. 
+A simple calculator, I made as a beginner project for The Odin Project - Foundations. Occasionally I update this repository to include and apply new things I have learnt. 
 
 ## Features 
 
@@ -24,7 +24,7 @@ I will be implementing these improvements gradually. And am welcome to suggestio
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Generate and Structure web page
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Style and layout web page
-* [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - develope responsiveness and make calculator interactive
+* [JAVASCRIPT](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - developed responsiveness and make calculator interactive
 
 ## Contributing
 
